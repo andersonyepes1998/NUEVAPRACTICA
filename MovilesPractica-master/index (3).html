@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrendamientos Nutibara</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="/IMAGES/NUTIBARA.png" type="image/x-icon">
+    
+</head>
+<body>
+
+    <div class="fondo">
+        <div class="contenedor">
+            <form class="formulario">
+                <h2>LISTA DE APARTAMENTOS / (nutibara)</h2>
+                    <ol>
+                        <li>
+                            <label for="name">Inmueble:</label>
+                            <input type="number" placeholder="inmueble" id="inmueble1">
+                            <span id="texto"></span>
+                        </li>
+            
+                        <li>
+                            <h3>*La dirección es obligatoria</h3>
+                            <label for="name">Dirección:</label>
+                            <input type="text" placeholder="direccion" id="direccion">
+                        </li>
+            
+                        <li>
+                            <h3>*El precio debe estar entre 100 millones y 500 millones</h3>
+                            <label for="name">Precio:</label>
+                            <input type="number" placeholder="precio" id="precio">
+                        </li>
+    
+                        <li>
+                            <h3>*Telefono</h3>
+                            <label for="name">Telefono:</label>
+                            <input type="number" placeholder="telefono" id="telefono">
+                        </li>
+
+                        <li>
+                            <h3>*Estado</h3>
+                            <label for="name">Disponible:</label>
+                            <input type="radio" name="estado" id="Disponible" checked>
+                            <br>
+                            <label for="name">No Disponible:</label>
+                            <input type="radio" name="estado" id="telefono">
+
+
+                        </li>
+                    </ol>
+                    <div class="botones">
+                        <button id="enviar" type="button">Enviar</button>
+                        <button id="buscar" type="button" onclick="encuentro()">Buscar Inmueble</button>
+                        <button id="lista" type="button">Lista Inmueble</button>
+                        <button id="reiniciar">Cotizar de nuevo</button>
+                    </div>
+                    <!--<div class="informacion">
+                        <p>PRECIO: <label></label> </p>
+                        <p>DIRECCION: <label></label> </p>
+                        <p>TELEFONO: <label></label> </p>
+                    </div> -->
+                    
+                </form>
+        </div>
+
+        <section class="modal" id="modal">
+            <div class=modalContainer>
+                <h2 class="modalTittle">Inmueble entre 200 y 300 Millones de pesos.</h2>
+                <div class="contenedorModal">
+                    <div class="alert alert-success" role="alert" id="alerta">
+                        
+                      </div>
+                </div>
+
+                <div class="modalButton">
+                    <a href="#" class="modalClose" id="close">Cerrar</a>
+                    <a href="#" class="modalClose" id="disponibleModal">Disponibles</a>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
